@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS - Події миші і клавіатури</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/modern-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1>Події в JavaScript</h1>
+
+      <section>
+        <p class="h3"><b>1</b> Task 1</p>
+        <p>
+          Додайте на блок div-1 подію клік і по кліку запуск функції t1. Функція
+          повинна повертати та виводити на екран вміст блоку (тільки текст).
+          Вивід здійснюється у out-1.
+        </p>
+        <div id="div-1" class="block mb-3">Я блок div-1</div>
+        <div id="out-1" class="output-container"></div>
+      </section>
+
+      <section>
+        <p class="h3"><b>2</b> Task 2</p>
+        <p>
+          Додайте на блок div-2 подію клік і по кліку запуск функції t2. Функція
+          повинна повертати true або false в залежності від того, чи натиснута
+          клавіша alt чи ні в момент кліка. Також, виводьте на екран результат.
+          Вивід здійснюється у out-2.
+        </p>
+        <div id="div-2" class="block mb-3">Я блок div-2</div>
+        <div id="out-2" class="output-container"></div>
+      </section>
+
+      <section>
+        <p class="h3"><b>3</b> Task 3</p>
+        <p>
+          Додайте на блок div-3 подію клік. При натисканні - збільшуйте ширину
+          блоку на 5px. Кожен клік – збільшення ширини на 5px. 10 кліків - на
+          50px. Ширину виводьте у out-3. отримати ширину можна
+          getComputedStyle() більш детально прочитайте на MDN.
+        </p>
+        <div id="div-3" class="block mb-3">Я блок div-3</div>
+        <div id="out-3" class="output-container"></div>
+      </section>
+
+      <section>
+        <p class="h3"><b>4</b> Task 4</p>
+        <p>
+          Напишіть код, який при натисненні на кнопку генерує випадкове число
+          від 0 до 100 і виводить його.
+        </p>
+        <div class="card text-center">
+          <h2>Random number:</h2>
+          <p id="out-4" class="h3 my-4 text-center">
+            Тут має бути рандомне число
+          </p>
+          <button id="b-4" type="button" class="btn btn-success mx-auto">
+            Generate Random Number
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <p class="h3"><b>5</b> Task 5</p>
+        <p>
+          Якщо натиснути кнопку, текст має бути прихованим. При повторному
+          натисканні – текст знову з'являється.
+        </p>
+        <div class="card">
+          <button id="b-5" type="button" class="btn mb-3 mx-auto">
+            Toggle Text Visibility
+          </button>
+          <p id="element-5" class="text-center text-secondary">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            ab exercitationem debitis amet ipsam nisi blanditiis quisquam
+            numquam quae quo. Sit, eos. Quaerat sunt eligendi dolorem. Ratione
+            quos neque praesentium nam eos voluptatibus quia, culpa tempora sed?
+            Quisquam sapiente beatae magni excepturi sunt dolorem ipsam iusto
+            ullam provident veniam, quia laboriosam sequi nostrum, error
+            accusamus aut modi non optio tempora cum quae, asperiores corrupti
+            dignissimos. Aperiam, quis! Aperiam illum cum et sint porro deleniti
+            modi incidunt vel expedita excepturi architecto dolor aut
+            reprehenderit molestias voluptatem nam, magni asperiores facilis,
+            eum perspiciatis! Laudantium illo consectetur dignissimos mollitia
+            quasi inventore, soluta doloremque!
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <p class="h3"><b>6</b> Task 6</p>
+        <p>
+          Даний блок div-6. Всередині блоку - зображення 1.png. При наведенні
+          миші (mouseenter) – змінюйте зображення на 2.png. При відведенні миші
+          - кнопки миші, повертайте вихідне зображення.
+        </p>
+        <div id="div-6" class="text-center mb-3">
+          <img src="img/1.png" alt="Image 1" class="img-fluid" />
+        </div>
+      </section>
+
+      <section>
+        <p class="h3"><b>7</b> Task 7</p>
+        <p>
+          Даний блок div-7. Додати до нього подію move. При кожному русі миші
+          збільшуйте число всередині на 1.
+        </p>
+        <div id="div-7" class="block mb-3 h1">1</div>
+      </section>
+
+      <section>
+        <p class="h3"><b>8</b> Task 8</p>
+        <p>
+          Даний блок div-8. Додати до нього подію move. При кожному русі миші
+          збільшуйте ширину блоку на 1px.
+        </p>
+        <div id="div-8" class="block mb-3">Блок div-8</div>
+      </section>
+
+      <section>
+        <p class="h3"><b>9</b> Task 9</p>
+        <p>
+          Створіть блок зі списком новин. Біля кожної новини має бути кнопка
+          Видалити, при натисканні на яку відповідна новина зникає. Також
+          створіть кнопку Hide / Show для відображення новини.
+        </p>
+        <div id="news" class="d-grid gap-3">
+          <div class="card new">
+            <div class="card-header">
+              <h3 class="card-title">New One</h3>
+              <div class="card-actions">
+                <button type="button" class="btn button-hide">
+                  Hide / Show
+                </button>
+                <button type="button" class="btn btn-danger button-delete">
+                  Delete
+                </button>
+              </div>
+            </div>
+            <p class="card-content new-content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              ab exercitationem debitis amet ipsam nisi blanditiis quisquam
+              numquam quae quo. Sit, eos. Quaerat sunt eligendi dolorem. Ratione
+              quos neque praesentium nam eos voluptatibus quia, culpa tempora
+              sed?
+            </p>
+          </div>
+
+          <div class="card new">
+            <div class="card-header">
+              <h3 class="card-title">New Two</h3>
+              <div class="card-actions">
+                <button type="button" class="btn button-hide">
+                  Hide / Show
+                </button>
+                <button type="button" class="btn btn-danger button-delete">
+                  Delete
+                </button>
+              </div>
+            </div>
+            <p class="card-content new-content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              ab exercitationem debitis amet ipsam nisi blanditiis quisquam
+              numquam quae quo. Sit, eos. Quaerat sunt eligendi dolorem. Ratione
+              quos neque praesentium nam eos voluptatibus quia, culpa tempora
+              sed?
+            </p>
+          </div>
+
+          <div class="card new">
+            <div class="card-header">
+              <h3 class="card-title">New Three</h3>
+              <div class="card-actions">
+                <button type="button" class="btn button-hide">
+                  Hide / Show
+                </button>
+                <button type="button" class="btn btn-danger button-delete">
+                  Delete
+                </button>
+              </div>
+            </div>
+            <p class="card-content new-content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              ab exercitationem debitis amet ipsam nisi blanditiis quisquam
+              numquam quae quo. Sit, eos. Quaerat sunt eligendi dolorem. Ratione
+              quos neque praesentium nam eos voluptatibus quia, culpa tempora
+              sed?
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
