@@ -1,0 +1,9 @@
+.block {
+  border: 5px solid red;
+  background-color: yellow;
+  color: black !important;
+  width: 200px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+}
