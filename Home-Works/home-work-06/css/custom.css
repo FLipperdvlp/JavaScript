@@ -1,0 +1,168 @@
+/* Custom styling for the form application */
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary-color: #f0fdf4;
+  --accent-color: #10b981;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --danger-color: #ef4444;
+  --info-color: #0ea5e9;
+  --border-radius: 0.5rem;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
+}
+
+body {
+  background: linear-gradient(135deg, #f6f8fc 0%, #e2e8f0 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0;
+  background-color: transparent;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.app-header::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.task-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.task-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+}
+
+.task-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.task-number {
+  background-color: white;
+  color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.task-content {
+  padding: 1.5rem;
+}
+
+.task-description {
+  margin-bottom: 1.5rem;
+  color: #64748b;
+}
+
+.output-area {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  min-height: 50px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.btn-task {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-task:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-range::-webkit-slider-thumb {
+  background: var(--primary-color);
+}
+
+.form-select {
+  border-radius: var(--border-radius);
+  border: 1px solid #e2e8f0;
+}
+
+/* User form styling */
+.user-form {
+  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+}
+
+.user-form .form-label {
+  color: white;
+  font-weight: 500;
+}
+
+.user-form .form-control {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .task-card {
+    margin-bottom: 1.5rem;
+  }
+}

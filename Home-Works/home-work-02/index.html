@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS - function</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container py-5 px-3">
+      <h1 class="h1 text-center">Функции, Об'єкти, Масиви, Рядки</h1>
+      <h2 class="h2 text-center mb-5">
+        JavaScript - function
+      </h2>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 1.</b></p>
+        <p>Напишіть функцію, яка приймає у input числа і повертає більше з них. І виводить в out-1.</p>
+        <p class="cd">
+          function findMaxNumber() {<br />
+          }<br />
+          document.querySelector('#b-1').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <label for="input-1" class="form-label">Введіть числа, розділяючи комою і пробілом</label>
+            <input type="text" class="form-control input-1" id="input-1" >
+          </div>
+        </div>
+        <button id="b-1" type="button" class="btn btn-success px-5 mb-3 ">Task-1</button>
+        <div id="out-1" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 2.</b></p>
+        <p>Напишіть функцію, яка приймає число і виводить таблицю множення для цього числа в out-2.</p>
+        <p class="cd">
+          function getTableMultiple() {<br />
+          }<br />
+          document.querySelector('#b-2').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-2" class="form-label">Введіть число</label>
+            <input type="number" class="form-control" id="input-2" >
+          </div>
+        </div>
+        <button id="b-2" type="button" class="btn btn-success px-5 mb-3 ">Task-2</button>
+        <div id="out-2" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 3.</b></p>
+        <p>Напишіть функцію t3 яка приймає ваш рік народження та обчислює (повертає) ваш вік.</p>
+        <p class="cd">
+          function t3(year) {<br />
+          }<br />
+          document.querySelector('#b-3').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-3" class="form-label">Введіть ваш рік народження</label>
+            <input type="number" class="form-control" id="input-3" >
+          </div>
+        </div>
+        <button id="b-3" type="button" class="btn btn-success px-5 mb-3 ">Task-3</button>
+        <div id="out-3" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 4.</b></p>
+        <p>Напишіть функцію t4, яка приймає 2 числа та повертає випадкове ціле число від першого до другого прийнятого параметра.</p>
+        <p class="cd">
+          function t4(a, b) {<br />
+          }<br />
+          document.querySelector('#b-4').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-4-1" class="form-label">Введіть перше число</label>
+            <input type="number" class="form-control" id="input-4-1" >
+          </div>
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-4-2" class="form-label">Введіть друге число</label>
+            <input type="number" class="form-control" id="input-4-2" >
+          </div>
+        </div>
+ 
+        <button id="b-4" type="button" class="btn btn-success px-5 mb-3 ">Task-4</button>
+        <div id="out-4" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 5.</b></p>
+        <p>Напишіть функцію t5, яка повертає випадковий колір у форматі rgb(x,y,z)(рядок). Де x, y, z – випадкові числа в діапазоні [0, 255].</p>
+        <p class="cd">
+          function t5() {<br />
+          }<br />
+          document.querySelector('#b-5').onclick = function () {}; <br />
+        </p>
+        <button id="b-5" type="button" class="btn btn-success px-5 mb-3 ">Task-5</button>
+        <div id="out-5" class="p-3 rounded-3" style="background:beige"></div>
+      </section>
+
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 6.</b></p>
+        <p>Напишіть функцію t6, яка приймає рядок як параметр і повертає результат з очищеними пробілами на початку та в кінці рядка. Тобто приймає _hello_(де знак _ символізує прогалину), а повертає hello. Для видалення пробілів – використовуйте trim.</p>
+        <p class="cd">
+          function t6(str) {<br />
+          }<br />
+          document.querySelector('#b-6').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="input-6" class="form-label">Введіть рядок з пробілами на початку і в кінці</label>
+            <input type="text" class="form-control" id="input-6" >
+          </div>
+        </div>
+        <button id="b-6" type="button" class="btn btn-success px-5 mb-3">Task-6</button>
+        <div id="out-6" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 7.</b></p>
+        <p>Напишіть функцію t7, яка приймає число та повертає true, якщо число парне, і false якщо не парне.</p>
+        <p class="cd">
+          function t7(num) {<br />
+          }<br />
+          document.querySelector('#b-7').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-7" class="form-label">Введіть число</label>
+            <input type="number" class="form-control" id="input-7" >
+          </div>
+        </div>
+        <button id="b-7" type="button" class="btn btn-success px-5 mb-3">Task-7</button>
+        <div id="out-7" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 8.</b></p>
+        <p>Напишіть функцію для пошуку максимальної цифри у числі.</p>
+        <p class="cd">
+          function t8(num) {<br />
+          }<br />
+          document.querySelector('#b-8').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-8" class="form-label">Введіть число</label>
+            <input type="number" class="form-control" id="input-8" >
+          </div>
+        </div>
+        <button id="b-8" type="button" class="btn btn-success px-5 mb-3">Task-8</button>
+        <div id="out-8" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 9.</b></p>
+        <p> Написати функцію, яка повертає число Фібоначчі за переданим порядковим номером. Числа Фібоначчі: 1, 1, 2, 3, 5, 8, 13 ... Ряд ґрунтується на тому, що кожне число дорівнює сумі двох попередніх чисел. Наприклад: порядковий номер 3 – число 2, порядковий номер 6 – число 8.</p>
+        <p class="cd">
+          function t9(index) {<br />
+          }<br />
+          document.querySelector('#b-9').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-3">
+            <label for="input-9" class="form-label">Введіть індекс числа Фібоначі</label>
+            <input type="number" class="form-control" id="input-9" >
+          </div>
+        </div>
+        <button id="b-9" type="button" class="btn btn-success px-5 mb-3">Task-9</button>
+        <div id="out-9" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <section class="p-4 rounded-3 mb-5">
+        <p class="h3"><b>Task 10.</b></p>
+        <p> Створіть об'єкт, що описує автомобіль (виробник, модель, рік
+          випуску, середня швидкість), і наступні функції для роботи з цим
+          об'єктом. <br>
+          1. Функція для виведення інформації про автомобіль на
+          екран. <br>
+          2. Функція для підрахунку необхідного часу для подолання
+          переданої відстані із середньою швидкістю. Враховуйте,
+          що через кожні 4 години дороги, водієві необхідно робити
+          перерву на 1 годину.<br>
+          3. Функція, яка виводить на екран інформацію про час
+          поїздки, а також час прибуття в пункт призначення.</p>
+        <p class="cd">
+          function t10() {<br />
+          }<br />
+          document.querySelector('#b-10').onclick = function () {}; <br />
+        </p>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-3">
+            <label for="input-10-1" class="form-label">Виробник</label>
+            <input type="text" class="form-control" id="input-10-1" placeholder="Наприклад: Toyota">
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <label for="input-10-2" class="form-label">Модель</label>
+            <input type="text" class="form-control" id="input-10-2" placeholder="Наприклад: Corolla">
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <label for="input-10-3" class="form-label">Рік випуску</label>
+            <input type="number" class="form-control" id="input-10-3" placeholder="Наприклад: 2020">
+          </div>
+          <div class="col-md-6 col-lg-3 mb-3">
+            <label for="input-10-4" class="form-label">Середня швидкість (км/год)</label>
+            <input type="number" class="form-control" id="input-10-4" placeholder="Наприклад: 80">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="input-10-5" class="form-label">Відстань (км)</label>
+            <input type="number" class="form-control" id="input-10-5" placeholder="Наприклад: 500">
+          </div>
+        </div>
+        <button id="b-10" type="button" class="btn btn-success px-5 mb-3">Task-10</button>
+        <div id="out-10" class="p-3 text-bg-light rounded-3"></div>
+      </section>
+
+      <footer class="mt-5 text-center">
+        <p>JavaScript Practice - Functions, Objects, Arrays, and Strings</p>
+      </footer>
+    </div>
+  </body>
+</html>

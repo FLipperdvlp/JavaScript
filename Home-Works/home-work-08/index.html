@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS - Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body class="bg-dark">
+    <div class="container py-5 px-3 text-bg-info">
+      <h1 class="h1 text-center mb-5">
+        <span class="badge bg-danger p-3">Практика JSON і localStorage</span>
+      </h1>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5 shadow">
+        <p class="h3 text-danger"><b>Task 1.</b></p>
+        <p class="lead">Керування списком користувачів</p>
+        <ul class="list-group list-group-flush mb-3">
+          <li class="list-group-item">
+            Створіть HTML-форму, яка міститиме поля для введення ім'я, віку та
+            електронної адреси користувача.
+          </li>
+          <li class="list-group-item">
+            За допомогою JavaScript зберігайте введені дані у JSON-форматі.
+          </li>
+          <li class="list-group-item">
+            Реалізуйте можливість додавання нового користувача до списку.
+          </li>
+          <li class="list-group-item">
+            Виведіть список користувачів на сторінці у зручному форматі,
+            наприклад, у вигляді HTML-таблиці.
+          </li>
+          <li class="list-group-item">
+            Реалізуйте можливість видалення користувача зі списку.
+          </li>
+          <li class="list-group-item">
+            Забезпечте збереження та відновлення списку користувачів за
+            допомогою localStorage. При оновленні сторінки дані мають залишатися
+            незмінними.
+          </li>
+        </ul>
+      </section>
+
+      <section class="text-bg-secondary p-4 rounded-3 mb-5 shadow">
+        <h2 class="h3 mb-4 text-center">
+          <span class="badge bg-primary p-2">Current user</span>
+        </h2>
+        <form id="user-form" class="form-container">
+          <div class="input">
+            <label class="input-label" for="user-name">User name:</label>
+            <input
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Input your name"
+              required
+            />
+          </div>
+          <div class="input">
+            <label class="input-label" for="user-age">User age:</label>
+            <input
+              type="number"
+              id="user-age"
+              name="user-age"
+              placeholder="age"
+              required
+              min="1"
+              max="120"
+            />
+          </div>
+          <div class="input">
+            <label class="input-label" for="user-email">User email:</label>
+            <input
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="email"
+              required
+            />
+          </div>
+          <button id="add-button" type="submit">Add user</button>
+        </form>
+      </section>
+
+      <section class="users shadow">
+        <h2 class="h3 mb-4 text-center text-light">
+          <span class="badge bg-warning text-dark p-2">Users List</span>
+        </h2>
+        <div class="users-data-container">
+          <ul class="users-list">
+            <!-- Users will be dynamically added here by JavaScript -->
+            <!-- <li class="list-item">
+              <div class="user-data-container">
+                <div class="user-data">
+                  <span class="user-data-label">Name:</span>
+                  <span class="user-data-value">Хмелюк Сергій</span>
+                </div>
+                <div class="user-data">
+                  <span class="user-data-label">Age:</span>
+                  <span class="user-data-value">25</span>
+                </div>
+                <div class="user-data">
+                  <span class="user-data-label">Email:</span>
+                  <span class="user-data-value">s.hmeljuk@gmail.com</span>
+                </div>
+              </div>
+              <button class="user-delete-button" title="Delete user">
+                &times;
+              </button>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
