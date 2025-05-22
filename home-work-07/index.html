@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form</title>
+  <style>
+    .error { color: red; font-size: 0.9em; }
+    .form-group { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <form id="userForm">
+    <div class="form-group">
+      <label>First Name: <input type="text" id="firstName"></label>
+      <div class="error" id="firstNameError"></div>
+    </div>
+    <div class="form-group">
+      <label>Last Name: <input type="text" id="lastName"></label>
+      <div class="error" id="lastNameError"></div>
+    </div>
+    <div class="form-group">
+      <label>Password: <input type="password" id="password"></label>
+      <div class="error" id="passwordError"></div>
+    </div>
+    <div class="form-group">
+      <label>Email: <input type="text" id="email"></label>
+      <div class="error" id="emailError"></div>
+    </div>
+    <div class="form-group">
+      <label>Address: <input type="text" id="address"></label>
+      <div class="error" id="addressError"></div>
+    </div>
+    <div class="form-group">
+      <label>City: <input type="text" id="city"></label>
+      <div class="error" id="cityError"></div>
+    </div>
+    <div class="form-group">
+      <label>Zip: <input type="text" id="zip"></label>
+      <div class="error" id="zipError"></div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="out-1" style="margin-top:20px; white-space:pre-wrap;"></div>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const password = document.getElementById("password").value;
+      const email = document.getElementById("email").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const zip = document.getElementById("zip").value.trim();
+
+      const nameRegex = /^[A-Z][a-zA-Z]{4,24}$/;
+      const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,20}$/;
+      const emailRegex = /^[a-zA-Z0-9._-]{3,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const addressRegex = /^[a-zA-Z\s]{5,}$/;
+      const cityRegex = /^[A-Z][a-zA-Z]{4,24}$/;
+      const zipRegex = /^\d{5}$/;
+
+      const showError = (id, message) => {
+        document.getElementById(id).textContent = message;
+        valid = false;
+      };
+
+      document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+      if (!nameRegex.test(firstName)) showError("firstNameError", "Невірне ім’я. Перевірте умови.");
+      if (!nameRegex.test(lastName)) showError("lastNameError", "Невірне прізвище. Перевірте умови.");
+      if (!passwordRegex.test(password)) showError("passwordError", "Пароль має містити хоча б одну велику, малу літеру і цифру. Довжина від 8 до 20 символів.");
+      if (!emailRegex.test(email)) showError("emailError", "Невірний формат email.");
+      if (!addressRegex.test(address)) showError("addressError", "Адреса повинна містити тільки літери, не менше 5 символів.");
+      if (!cityRegex.test(city)) showError("cityError", "Невірне місто. Перевірте умови.");
+      if (!zipRegex.test(zip)) showError("zipError", "ZIP повинен містити рівно 5 цифр.");
+
+      if (valid) {
+        document.getElementById("out-1").textContent =
+          `First Name: ${firstName}\n` +
+          `Last Name: ${lastName}\n` +
+          `Password: ${password}\n` +
+          `Email: ${email}\n` +
+          `Address: ${address}\n` +
+          `City: ${city}\n` +
+          `Zip: ${zip}`;
+      } else {
+        document.getElementById("out-1").textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
